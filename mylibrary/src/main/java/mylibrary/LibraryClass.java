@@ -42,17 +42,19 @@ public class LibraryClass {
 	}
 	
 	public void logoutFunction(boolean lio) {
-		
-		JOptionPane.showMessageDialog(null, "You are logout");
+		lio=false;
 		
 	}
 
-	public void addBook(String title, String auther, String signature, String isbn) {
-		book.title=title;
-		book.auther=auther;
-		book.signature=signature;
-		book.isbn=Integer.parseInt(isbn);
-		list.add(book);
+	public boolean addBook(String title, String auther, String signature, String isbn,boolean lio) {
+		if(lio=true) {
+			book.title=title;
+			book.auther=auther;
+			book.signature=signature;
+			book.isbn=Integer.parseInt(isbn);
+			list.add(book);
+		}
+		return false;
 		
 	}
 	

@@ -17,7 +17,7 @@ public class LogoutTest {
 	
 	@Given("The administrator loged in")
 	public void the_administrator_loged_in() {
-		lt.setLio(true);
+		lt.lio=true;
 	}
 
 	@When("He call logout function")
@@ -27,6 +27,6 @@ public class LogoutTest {
 
 	@Then("Administrator log out")
 	public void administrator_log_out() {
-	    JOptionPane.showMessageDialog(null, "You logout");
+	    JOptionPane.showMessageDialog(null, "You are logout");
 	}
 }

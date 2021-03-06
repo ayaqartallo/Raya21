@@ -34,7 +34,7 @@ public class LoginTest {
 	@Then("Administrator with username {string} and password {string} login")
 	public void administrator_with_username_and_password_login(String username, String password) {
 		String expected=s;
-		String actual=username;
+		String actual=password;
 		assertTrue(expected==actual);
 		
 	}
