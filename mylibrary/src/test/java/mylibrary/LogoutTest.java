@@ -8,21 +8,20 @@ import io.cucumber.java.en.When;
 
 public class LogoutTest {
 
-	LibraryClass logout;
-	LoginTest lt;
+	LibraryClass lc;
 	
-	public LogoutTest(LibraryClass logout) {
-		this.logout=logout;
+	public LogoutTest() {
+		lc=new LibraryClass();
 	}
 	
 	@Given("The administrator loged in")
 	public void the_administrator_loged_in() {
-		lt.lio=true;
+		lc.setLio(true);
 	}
 
 	@When("He call logout function")
 	public void he_call_logout_function() {
-		logout.logoutFunction(false);
+		lc.logoutFunction();
 	}
 
 	@Then("Administrator log out")

@@ -1,5 +1,5 @@
 Feature: Admin Logout
-@ignore
+@regression
 Scenario: Administrator log out
 Given The administrator loged in
 When He call logout function

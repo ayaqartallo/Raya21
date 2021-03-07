@@ -9,6 +9,7 @@ public class LibraryClass {
 	private ArrayList <Book>list=new ArrayList<Book>();
 	private Book book;
 	private ArrayList <CredentialsClass>credential=new ArrayList<CredentialsClass>();
+	private boolean lio=false;
 	
 	CredentialsClass c1=new CredentialsClass("alaa", "20alaa");
 	CredentialsClass c2=new CredentialsClass("aya", "1234");
@@ -22,7 +23,7 @@ public class LibraryClass {
 		credential.add(c4);
 	}
 	
-	public String loginFunction(String user,String pass,boolean lio) {
+	public String loginFunction(String user,String pass) {
 		String s = null;
 		String u=user;
 		String p=pass;
@@ -41,12 +42,17 @@ public class LibraryClass {
 		
 	}
 	
-	public void logoutFunction(boolean lio) {
-		lio=false;
+	public void logoutFunction() {
+		if(lio==true) {
+			lio=false;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "You are already logged out");
+		}
 		
 	}
 
-	public boolean addBook(String title, String auther, String signature, String isbn,boolean lio) {
+	public boolean addBook(String title, String auther, String signature, String isbn) {
 		if(lio=true) {
 			book.title=title;
 			book.auther=auther;
@@ -56,6 +62,10 @@ public class LibraryClass {
 		}
 		return false;
 		
+	}
+
+	public void setLio(boolean b) {
+		this.lio=b;
 	}
 	
 

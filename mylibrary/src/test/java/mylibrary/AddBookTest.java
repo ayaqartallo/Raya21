@@ -12,17 +12,15 @@ public class AddBookTest {
 	
 	private boolean e;
 	private LibraryClass b;
-	LoginTest lt1;
 	
 	@Given("Administrator loged in")
-	public void administrator_loged_in() {
-	    lt1.lio=true;
+	public void administrator_logged_in() {
+	   b.setLio(true); 
 	}
 
 	@When("He fill the book's {string} and {string} and {string} and {string}")
 	public void he_fill_the_book_s_and_and_and(String title, String auther, String signature, String isbn) {
-		boolean l=lt1.lio;
-	    e=b.addBook(title,auther,signature,isbn,l);
+	    e=b.addBook(title,auther,signature,isbn);
 	}
 
 	@Then("Add the book in the library")
@@ -33,8 +31,8 @@ public class AddBookTest {
 	}
 
 	@Given("Administrator doesn't loged in")
-	public void administrator_doesn_t_loged_in() {
-	    lt1.lio=false;
+	public void administrator_doesn_t_logged_in() {
+	   b.setLio(false);
 	}
 
 	@Then("A message login to add books should be appear")
