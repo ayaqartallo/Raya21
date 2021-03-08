@@ -13,9 +13,13 @@ public class AddBookTest {
 	private boolean e;
 	private LibraryClass b;
 	
+	public AddBookTest(LibraryClass b) {
+		this.b=b;
+	}
+	
 	@Given("Administrator logged in")
 	public void administrator_logged_in() {
-	   b.setLoggedin(); 
+	   b.setLoggedin();
 	}
 
 	@When("He fill the book's {string} and {string} and {string} and {string}")
@@ -32,7 +36,7 @@ public class AddBookTest {
 
 	@Given("Administrator doesn't logged in")
 	public void administrator_doesn_t_logged_in() {
-	   b.setLoggedin();
+	   
 	}
 
 	@Then("A message login to add books should be appear")

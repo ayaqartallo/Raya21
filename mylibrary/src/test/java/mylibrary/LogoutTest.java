@@ -10,6 +10,9 @@ public class LogoutTest {
 
 	LibraryClass lc;
 	
+	public LogoutTest(LibraryClass lc) {
+		this.lc=lc;
+	}
 	
 	@Given("The administrator logged in")
 	public void the_administrator_logged_in() {

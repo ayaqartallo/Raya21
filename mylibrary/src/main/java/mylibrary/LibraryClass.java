@@ -9,7 +9,7 @@ public class LibraryClass {
 	private ArrayList <Book>list;
 	private Book book;
 	private ArrayList <CredentialsClass>credential;
-	private boolean lio=false;
+	boolean lio=false;
 	
 	CredentialsClass c1;
 	CredentialsClass c2;
@@ -28,7 +28,7 @@ public class LibraryClass {
 	}
 	
 	public String loginFunction(String user,String pass) {
-		String s = null;
+		String s = "not found";
 		String u=user;
 		String p=pass;
 		while(credential!=null) {
@@ -36,7 +36,7 @@ public class LibraryClass {
 			    if(c.username==user){
 				    if(c.password==pass){
 					    lio=true;
-					    s=pass;
+					    s="found";
 					    return s;
 				    }
 				
@@ -60,17 +60,16 @@ public class LibraryClass {
 
 	public boolean addBook(String title, String auther, String signature, String isbn) {
 		if(lio=true) {
-			int i=Integer.parseInt(isbn);
 			while(list!=null) {
 				for(Book book: list) {
-					if(book.isbn==i||book.signature==signature) {
+					if(book.isbn==isbn||book.signature==signature) {
 						JOptionPane.showMessageDialog(null, "This book is exist");
 					}
 					else {
 						this.book.title=title;
 						this.book.auther=auther;
 						this.book.signature=signature;
-						this.book.isbn=i;
+						this.book.isbn=isbn;
 					}
 				}
 			}
@@ -80,7 +79,7 @@ public class LibraryClass {
 	}
 
 	public void setLoggedin() {
-		lio=true;
+		this.lio=true;
 	}
 	
 
