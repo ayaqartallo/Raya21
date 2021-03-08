@@ -1,7 +1,7 @@
 Feature: Admin Logout
-@regression
+@Regression
 Scenario: Administrator log out
-Given The administrator loged in
+Given The administrator logged in
 When He call logout function
 Then Administrator log out
 

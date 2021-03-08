@@ -10,12 +10,9 @@ public class LogoutTest {
 
 	LibraryClass lc;
 	
-	public LogoutTest() {
-		lc=new LibraryClass();
-	}
 	
 	@Given("The administrator loged in")
-	public void the_administrator_loged_in() {
+	public void the_administrator_logged_in() {
 		lc.setLio(true);
 	}
 
