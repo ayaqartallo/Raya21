@@ -11,9 +11,9 @@ public class LogoutTest {
 	LibraryClass lc;
 	
 	
-	@Given("The administrator loged in")
+	@Given("The administrator logged in")
 	public void the_administrator_logged_in() {
-		lc.setLio(true);
+		lc.setLoggedin();
 	}
 
 	@When("He call logout function")

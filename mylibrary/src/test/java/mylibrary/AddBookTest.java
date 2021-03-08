@@ -13,9 +13,9 @@ public class AddBookTest {
 	private boolean e;
 	private LibraryClass b;
 	
-	@Given("Administrator loged in")
+	@Given("Administrator logged in")
 	public void administrator_logged_in() {
-	   b.setLio(true); 
+	   b.setLoggedin(); 
 	}
 
 	@When("He fill the book's {string} and {string} and {string} and {string}")
@@ -30,9 +30,9 @@ public class AddBookTest {
 	    assertTrue(expected==actual);
 	}
 
-	@Given("Administrator doesn't loged in")
+	@Given("Administrator doesn't logged in")
 	public void administrator_doesn_t_logged_in() {
-	   b.setLio(false);
+	   b.setLoggedin();
 	}
 
 	@Then("A message login to add books should be appear")

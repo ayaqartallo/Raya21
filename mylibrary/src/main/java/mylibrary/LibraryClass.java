@@ -31,15 +31,17 @@ public class LibraryClass {
 		String s = null;
 		String u=user;
 		String p=pass;
-		for(CredentialsClass c:credential) {
-			if(c.username==user){
-				if(c.password==pass){
-					lio=true;
-					s=pass;
-					return s;
-				}
+		while(credential!=null) {
+		    for(CredentialsClass c:credential) {
+			    if(c.username==user){
+				    if(c.password==pass){
+					    lio=true;
+					    s=pass;
+					    return s;
+				    }
 				
-			}
+		    	}
+		    }
 		}
 		lio=false;
 		return s;
@@ -59,15 +61,17 @@ public class LibraryClass {
 	public boolean addBook(String title, String auther, String signature, String isbn) {
 		if(lio=true) {
 			int i=Integer.parseInt(isbn);
-			for(Book book: list) {
-				if(book.isbn==i||book.signature==signature) {
-					JOptionPane.showMessageDialog(null, "This book is exist");
-				}
-				else {
-					this.book.title=title;
-					this.book.auther=auther;
-					this.book.signature=signature;
-					this.book.isbn=i;
+			while(list!=null) {
+				for(Book book: list) {
+					if(book.isbn==i||book.signature==signature) {
+						JOptionPane.showMessageDialog(null, "This book is exist");
+					}
+					else {
+						this.book.title=title;
+						this.book.auther=auther;
+						this.book.signature=signature;
+						this.book.isbn=i;
+					}
 				}
 			}
 		}
@@ -75,8 +79,8 @@ public class LibraryClass {
 		
 	}
 
-	public void setLio(boolean b) {
-		this.lio=b;
+	public void setLoggedin() {
+		lio=true;
 	}
 	
 
