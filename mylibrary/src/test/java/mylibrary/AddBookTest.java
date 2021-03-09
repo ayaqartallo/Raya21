@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 public class AddBookTest {
 	
-	private boolean e;
+	private String e;
 	private LibraryClass b;
 	
 	public AddBookTest(LibraryClass b) {
@@ -29,8 +29,8 @@ public class AddBookTest {
 
 	@Then("Add the book in the library")
 	public void add_the_book_in_the_library() {
-	    boolean expected=true;
-	    boolean actual=e;
+	    String expected="found";
+	    String actual=e;
 	    assertTrue(expected==actual);
 	}
 

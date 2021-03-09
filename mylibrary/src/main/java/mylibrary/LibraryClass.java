@@ -58,23 +58,28 @@ public class LibraryClass {
 		
 	}
 
-	public boolean addBook(String title, String auther, String signature, String isbn) {
+	public String addBook(String title, String auther, String signature, String isbn) {
+		String s = "not found";
 		if(lio=true) {
 			while(list!=null) {
 				for(Book book: list) {
 					if(book.isbn==isbn||book.signature==signature) {
 						JOptionPane.showMessageDialog(null, "This book is exist");
+						s="not fount";
 					}
 					else {
 						this.book.title=title;
 						this.book.auther=auther;
 						this.book.signature=signature;
 						this.book.isbn=isbn;
+						list.add(book);
+						s="found";
+						
 					}
 				}
 			}
 		}
-		return false;
+		return s;
 		
 	}
 

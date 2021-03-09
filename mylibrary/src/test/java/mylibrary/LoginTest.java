@@ -37,7 +37,7 @@ public class LoginTest {
 	@Then("Administrator with valid password {string} logged in")
 	public void administrator_with_valid_password_logged_in(String password) {
 		String expected=s;
-		String actual=password;
+		String actual="found";
 		assertTrue(expected==actual);
 	}
 	
