@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import practice2021.Books;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
 public class LibraryClass {
 
 	private ArrayList <Book>list;
@@ -11,43 +17,46 @@ public class LibraryClass {
 	private ArrayList <CredentialsClass>credential;
 	public static boolean lio=false;
 	
-	CredentialsClass c1;
-	CredentialsClass c2;
-	CredentialsClass c3;
-	CredentialsClass c4;
+	CredentialsClass c1,c2,c3,c4;
+
 	
-	public void addCredentials() {
-		c1.username="alaa"; c1.password="20alaa";
-		c2.username="aya"; c2.password="1234";
-		c3.username="malek"; c3.password="1998m";
-		c4.username="khalid"; c4.password="2021k";
+	public LibraryClass()
+	{
+		credential=new ArrayList <CredentialsClass> ();
+		c1=new CredentialsClass("alaa","20alaa");
+		c2=new CredentialsClass("aya","1234");
+		c3=new CredentialsClass("malek","1998m");
+		c4=new CredentialsClass("khalid","2021k");
+		
 		credential.add(c1);
 		credential.add(c2);
 		credential.add(c3);
 		credential.add(c4);
+		
+
 	}
+		
 	
 	public String loginFunction(String user,String pass) {
-		String s = "not found";
-		String u=user;
-		String p=pass;
-		while(credential!=null) {
+		String s ="";
+
 		    for(CredentialsClass c:credential) {
-			    if(c.username==user){
-				    if(c.password==pass){
+
+			    if(c.username.equals(user)&&c.password.equals(pass)){				   
 					    lio=true;
 					    s="found";
+
 					    return s;
-				    }
-				
+					    
+					    
 		    	}
 		    }
-		}
+		
 		lio=false;
+
 		return s;
 		
 	}
-	
 	public void logoutFunction() {
 		if(lio==true) {
 			lio=false;
@@ -58,34 +67,28 @@ public class LibraryClass {
 		
 	}
 
-	public String addBook(String title, String auther, String signature, String isbn) {
-		String s = "not found";
-		if(lio=true) {
+	public String addBook(String title, String author, String signature, String isbn) {
+		Book b1=new Book(isbn,title,author,signature);
+		if(lio==true) {
 			while(list!=null) {
-				for(Book book: list) {
-					if(book.isbn==isbn||book.signature==signature) {
-						JOptionPane.showMessageDialog(null, "This book is exist");
-						s="not fount";
+				for(Book book:list) {
+					if(book.equals(b1)) {
+						System.out.println("This book is exist");
 					}
 					else {
-						this.book.title=title;
-						this.book.auther=auther;
-						this.book.signature=signature;
-						this.book.isbn=isbn;
-						list.add(book);
-						s="found";
-						
+						list.add(b1);
 					}
 				}
 			}
 		}
-		return s;
+		return "added";
 		
 	}
 
-	public void setLoggedin() {
-		this.lio=true;
+	public void setLoggedin(boolean l) {
+		this.lio=l;
 	}
-	
+
 
 }
+

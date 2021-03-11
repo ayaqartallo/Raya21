@@ -1,53 +1,56 @@
 package mylibrary;
 
+import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
+	import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
+	import javax.swing.JOptionPane;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+	import io.cucumber.java.en.Given;
+	import io.cucumber.java.en.Then;
+	import io.cucumber.java.en.When;
 
-public class LoginTest {
+	public class LoginTest {
 
-	private LibraryClass login;
-	private String user,pass,s;
+		private LibraryClass login;
+		private  String user;
+		private Object status; 
+		private String pw; 
+		
+		public LoginTest(LibraryClass login) {
+			this.login=login;
+		}
+		
+		@Given("Administrator enter a valid username {string}")
+		public void administrator_enter_a_valid_username(String username) {
+			user=username;
+		}
+		
+		@Given("He enter a valid password {string}")
+		public void he_enter_a_valid_password(String password) {
+		   pw=password;
+
+		}
+
+		@When("He call login funcion")
+		public void he_call_login_funcion() {
 	
-	public LoginTest(LibraryClass login) {
-		this.login=login;
-	}
+		    status=login.loginFunction(user,pw);	
 	
-	@Given("Administrator enter a valid username {string}")
-	public void administrator_enter_a_valid_username(String username) {
-		user=username;
-	}
+		}
+		@Then("Administrator with valid password logged in and the status should be {string}")
+		public void administrator_with_valid_password_logged_in_and_the_status_should_be(String status) {
+			assertEquals(this.status,status);
 	
-	@Given("He enter a valid password {string}")
-	public void he_enter_a_valid_password(String password) {
-	    pass=password;
-	}
-
-	@When("He call login funcion")
-	public void he_call_login_funcion() {
-	    s=login.loginFunction(user,pass);
-	}
-
-	@Then("Administrator with valid password {string} logged in")
-	public void administrator_with_valid_password_logged_in(String password) {
-		String expected=s;
-		String actual="found";
-		assertTrue(expected==actual);
-	}
-	
-	@Given("He enter a unvalid password {string}")
-	public void he_enter_a_unvalid_password(String password) {
-		pass=password;
-	}
-
-	@Then("A message wrong should appear")
-	public void a_message_wrong_should_appear() {
-		JOptionPane.showMessageDialog(null, "You enter a wrong password");
-	}
+		}
+		@Given("He enter a unvalid password {string}")
+		public void he_enter_a_unvalid_password(String password) {
+			pw=password;
+		}
+		@Then("A message wrong should appear")
+		public void a_message_wrong_should_appear() {
+			JOptionPane.showMessageDialog(null, "You enter a wrong password");
+		}
 }

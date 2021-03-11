@@ -16,7 +16,7 @@ public class LogoutTest {
 	
 	@Given("The administrator logged in")
 	public void the_administrator_logged_in() {
-		lc.setLoggedin();
+		lc.setLoggedin(true);
 	}
 
 	@When("He call logout function")

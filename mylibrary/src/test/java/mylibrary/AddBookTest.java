@@ -1,5 +1,6 @@
 package mylibrary;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import javax.swing.JOptionPane;
@@ -19,7 +20,7 @@ public class AddBookTest {
 	
 	@Given("Administrator logged in")
 	public void administrator_logged_in() {
-	   b.setLoggedin();
+	   b.setLoggedin(true);
 	}
 
 	@When("He fill the book's {string} and {string} and {string} and {string}")
@@ -29,14 +30,14 @@ public class AddBookTest {
 
 	@Then("Add the book in the library")
 	public void add_the_book_in_the_library() {
-	    String expected="found";
+	    String expected="added";
 	    String actual=e;
-	    assertTrue(expected==actual);
+	    assertEquals(actual,expected);
 	}
 
 	@Given("Administrator doesn't logged in")
 	public void administrator_doesn_t_logged_in() {
-	   
+	   b.setLoggedin(false);
 	}
 
 	@Then("A message login to add books should be appear")
