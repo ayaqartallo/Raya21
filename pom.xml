@@ -3,6 +3,7 @@
   <groupId>libraryapp</groupId>
   <artifactId>MyLibrary2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
   <dependency>
     <groupId>junit</groupId>
@@ -30,7 +31,30 @@
     <version>6.9.1</version>
     <scope>test</scope>
 </dependency>
-
-
   </dependencies>
+  
+  
+  <build>
+  <sourceDirectory>src/main/java</sourceDirectory>
+  <testSourceDirectory>src/test/java</testSourceDirectory>
+  <pluginManagement>
+  <plugins>
+  <plugin>
+  <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.7.0.1746</version>
+    </plugin>
+  </plugins>
+  </pluginManagement>
+  
+  </build>
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </project>
