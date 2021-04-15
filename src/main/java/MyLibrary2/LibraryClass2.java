@@ -9,7 +9,7 @@ public class LibraryClass2 {
 	
 	private ArrayList <Book2>list;
 	private ArrayList <CredentialsClass2>credential;
-	public static boolean lio=false;
+    static boolean lio=false;
 	ArrayList <String> details;
 	Book2 book1;
 	Book2 book2;

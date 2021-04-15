@@ -8,5 +8,7 @@ public class CredentialsClass2 {
 		this.username=username;
 		this.password=password;
 	}
+	
+	
 
 }
