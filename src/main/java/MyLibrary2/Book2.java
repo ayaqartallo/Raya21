@@ -38,8 +38,5 @@ public class Book2 {
 	    }
 
 
-	boolean isEqualBook(Book2 book) {
-		return equals(book);
-	}
 
 }

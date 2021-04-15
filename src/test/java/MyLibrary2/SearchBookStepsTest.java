@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,7 +26,7 @@ public class SearchBookStepsTest {
 	public  static String ISBN;
 	public  static String signature;
 	private LibraryClass2 lb;
-	private ArrayList <Book2> details1=new ArrayList<Book2>();
+	private List <Book2> details1=new ArrayList<Book2>();
 	private ArrayList <Book2> empty=new ArrayList<Book2>();
 	
 	public SearchBookStepsTest(LibraryClass2 lb) {
@@ -143,7 +144,7 @@ public class SearchBookStepsTest {
 
 	@Then("the full title of the book should be {string}")
 	public void the_full_title_of_the_book_should_be(String title) {
-		assertEquals(Title,title);
+		assertEquals(this.Title,title);
 	
 	}
 
@@ -208,7 +209,7 @@ public class SearchBookStepsTest {
 
 	@Then("the number of returend books should be {int}")
 	public void the_number_of_returend_books_should_be(Integer numReturnBooks) {
-		assertTrue(3==3);
+		assertTrue(this.numReturnBooks==numReturnBooks);
 	}
 
 	@Then("all the details of the books should be printed on the screen")

@@ -1,13 +1,14 @@
 package MyLibrary2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
 public class LibraryClass2 {
 	
 	private ArrayList <Book2>list;
-	private ArrayList <CredentialsClass2>credential;
+	static ArrayList <CredentialsClass2>credential;
 	static boolean lio=false;
 	ArrayList <String> details;
 	private ArrayList <Book2>list2;
@@ -37,7 +38,7 @@ public class LibraryClass2 {
 
 	}
 
-	public  String loginFunction(String user, String pw) {
+	static String loginFunction(String user, String pw) {
 		String s ="";
 
 	    for(CredentialsClass2 c:credential) {
@@ -57,7 +58,7 @@ public class LibraryClass2 {
 	return s;
 	}
 	public void logoutFunction() {
-		if(isLoggedin()) {
+		if(lio) {
 			lio=false;
 		}
 		else {
@@ -66,15 +67,12 @@ public class LibraryClass2 {
 		
 	}
 
-	private boolean isLoggedin() {
-		return lio==true;
-	}
-
+	
 	public String addBook(String title, String author, String signature, String isbn) {
 		Book2 b1=new Book2(isbn,title,author,signature);
-		if(isLoggedin()) {
+		if(lio) {
 				for(Book2 book:list) {
-					if(b1.isEqualBook(book)) {
+					if(b1.equals(book)) {
 						System.out.println("This book is exist");
 						
 					}
@@ -94,13 +92,13 @@ public class LibraryClass2 {
 		this.lio=l;
 	}
 	
-	public ArrayList <Book2> searchBookbysubTitle(String subTitle) {
+	public List <Book2> searchBookbysubTitle(String subTitle) {
         ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		
 		for(Book2 item:list)
 		{
-			String Title=item.getTitle().toLowerCase();
-         int exist=Title.indexOf(subTitle.toLowerCase());
+			String title=item.getTitle().toLowerCase();
+         int exist=title.indexOf(subTitle.toLowerCase());
          
          if(exist!=-1)
          {
@@ -117,7 +115,7 @@ public class LibraryClass2 {
 		
 		
 	}
-	public  ArrayList<Book2> searchBookbyAuthorName(String subAuthorName) {
+	public List<Book2> searchBookbyAuthorName(String subAuthorName) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		
 		for(Book2 item:list)
@@ -135,7 +133,7 @@ public class LibraryClass2 {
 		return searchedBook;
 	}
 	
-	public ArrayList<Book2> searchBookbyISBN(String subStringISBN) {
+	public List<Book2> searchBookbyISBN(String subStringISBN) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{
@@ -151,7 +149,7 @@ public class LibraryClass2 {
 		return searchedBook;
 	}
 	
-	public ArrayList<Book2> searchBookbySignature(String subSignature) {
+	public List<Book2> searchBookbySignature(String subSignature) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{
