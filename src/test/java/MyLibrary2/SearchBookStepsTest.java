@@ -206,7 +206,7 @@ public class SearchBookStepsTest {
 
 	@Then("the statement {string} should be printed on the screen")
 	public void the_statement_should_be_printed_on_the_screen(String notfound) {
-        //System.out.println(notfound);
+
 		log.info(notfound);
 	}
 

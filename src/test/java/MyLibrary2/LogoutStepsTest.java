@@ -29,7 +29,7 @@ public class LogoutStepsTest {
 
 	@Then("Administrator log out")
 	public void administrator_log_out() {
-	    //JOptionPane.showMessageDialog(null, "You are logout");
+	    
 		log.info("You are logout");
 	}
 

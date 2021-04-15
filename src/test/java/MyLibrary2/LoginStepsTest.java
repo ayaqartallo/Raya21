@@ -50,7 +50,6 @@ public class LoginStepsTest {
 	}
 	@Then("A message wrong should appear")
 	public void a_message_wrong_should_appear() {
-		//JOptionPane.showMessageDialog(null, "You enter a wrong password");
 		log.info("You enter a wrong password");
 	}
 

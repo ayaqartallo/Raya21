@@ -64,7 +64,7 @@ public class LibraryClass2 {
 			lio=false;
 		}
 		else {
-			//JOptionPane.showMessageDialog(null, "You are already logged out");
+			
 			log.info("You are already logged out");
 		}
 		
@@ -76,7 +76,6 @@ public class LibraryClass2 {
 		if(lio) {
 				for(Book2 book:list) {
 					if(b1.equals(book)) {
-						//System.out.println("This book is exist");
 						log.info("This book is exist");
 					}
 					else {

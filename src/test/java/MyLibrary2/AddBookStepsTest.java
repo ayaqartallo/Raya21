@@ -44,7 +44,6 @@ public class AddBookStepsTest {
 
 	@Then("A message login to add books should be appear")
 	public void a_message_login_to_add_books_should_appear() {
-	    //JOptionPane.showMessageDialog(null, "You should login to add book to the library!");
 		log.info("You should login to add book to the library!");
 	}
 
