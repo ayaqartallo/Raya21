@@ -1,7 +1,7 @@
 package MyLibrary2;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -107,7 +107,7 @@ public class LibraryClass2 {
 		lio=l;
 	}
 	
-	public ArrayList <Book2> searchBookbysubTitle(String subTitle) {
+	public List <Book2> searchBookbysubTitle(String subTitle) {
         ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		
 		for(Book2 item:list)
@@ -130,7 +130,7 @@ public class LibraryClass2 {
 		
 		
 	}
-	public  ArrayList<Book2> searchBookbyAuthorName(String subAuthorName) {
+	public  List<Book2> searchBookbyAuthorName(String subAuthorName) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		
 		for(Book2 item:list)
@@ -148,7 +148,7 @@ public class LibraryClass2 {
 		return searchedBook;
 	}
 	
-	public ArrayList<Book2> searchBookbyISBN(String subStringISBN) {
+	public List<Book2> searchBookbyISBN(String subStringISBN) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{
@@ -164,7 +164,7 @@ public class LibraryClass2 {
 		return searchedBook;
 	}
 	
-	public ArrayList<Book2> searchBookbySignature(String subSignature) {
+	public List<Book2> searchBookbySignature(String subSignature) {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{

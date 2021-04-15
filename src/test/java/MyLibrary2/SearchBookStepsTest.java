@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,7 +27,7 @@ public class SearchBookStepsTest {
 	public  static String ISBN;
 	public  static String signature;
 	private LibraryClass2 lb;
-	private ArrayList <Book2> details1=new ArrayList<Book2>();
+	private List <Book2> details1=new ArrayList<Book2>();
 	private ArrayList <Book2> empty=new ArrayList<Book2>();
 	
 	public SearchBookStepsTest(LibraryClass2 lb) {
