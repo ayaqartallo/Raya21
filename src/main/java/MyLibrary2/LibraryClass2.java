@@ -11,10 +11,15 @@ public class LibraryClass2 {
 	private ArrayList <CredentialsClass2>credential;
 	public static boolean lio=false;
 	ArrayList <String> details;
-	Book2 book1,book2,book3,book4;
+	Book2 book1;
+	Book2 book2;
+	Book2 book3;
+	Book2 book4;
 	private ArrayList <Book2>list2;
-	CredentialsClass2 c1,c2,c3,c4;
-
+	CredentialsClass2 c1;
+	CredentialsClass2 c2;
+	CredentialsClass2 c3;
+	CredentialsClass2 c4;
 	
 	public LibraryClass2()
 	{
@@ -107,8 +112,8 @@ public class LibraryClass2 {
 		
 		for(Book2 item:list)
 		{
-			String Title=item.getTitle().toLowerCase();
-         int exist=Title.indexOf(subTitle.toLowerCase());
+			String title=item.getTitle().toLowerCase();
+         int exist=title.indexOf(subTitle.toLowerCase());
          
          if(exist!=-1)
          {
@@ -130,8 +135,8 @@ public class LibraryClass2 {
 		
 		for(Book2 item:list)
 		{
-			String AuthorName=item.getAuthor().toLowerCase();
-         int exist=AuthorName.indexOf(subAuthorName.toLowerCase());
+			String authorName=item.getAuthor().toLowerCase();
+         int exist=authorName.indexOf(subAuthorName.toLowerCase());
          
          if(exist!=-1)
          {
@@ -147,8 +152,8 @@ public class LibraryClass2 {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{
-			String ISBN=item.getISBN();
-         int exist=ISBN.indexOf(subStringISBN);
+			String isbn=item.getISBN();
+         int exist=isbn.indexOf(subStringISBN);
          
          if(exist!=-1)
          {
@@ -163,8 +168,8 @@ public class LibraryClass2 {
 		ArrayList <Book2> searchedBook=new ArrayList<Book2>();
 		for(Book2 item:list)
 		{
-		 String Signature=item.getSignature().toLowerCase();
-         int exist=Signature.indexOf(subSignature.toLowerCase());
+		 String signature=item.getSignature().toLowerCase();
+         int exist=signature.indexOf(subSignature.toLowerCase());
          
          if(exist!=-1)
          {
