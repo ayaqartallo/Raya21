@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 public class LibraryClass2 {
 	
 	private ArrayList <Book2>list;
-	private ArrayList <CredentialsClass2>credential;
+	static ArrayList <CredentialsClass2>credential;
     static boolean lio=false;
 	ArrayList <String> details;
 	Book2 book1;
@@ -54,7 +54,7 @@ public class LibraryClass2 {
 
 	}
 
-	public  String loginFunction(String user, String pw) {
+	static  String loginFunction(String user, String pw) {
 		String s ="";
 
 	    for(CredentialsClass2 c:credential) {
