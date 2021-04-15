@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,13 +22,14 @@ public class SearchBookStepsTest {
 	private String subAuthorName;
 	private String subStringISBN;
 	private String subSignature;
-	public  static String Title;
+	public  static String title;
 	public  static String authorName;
 	public  static String ISBN;
 	public  static String signature;
 	private LibraryClass2 lb;
 	private List <Book2> details1=new ArrayList<Book2>();
 	private ArrayList <Book2> empty=new ArrayList<Book2>();
+	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
 	public SearchBookStepsTest(LibraryClass2 lb) {
 		this.lb=lb;
@@ -71,7 +73,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 Title=item.getTitle();
+			 title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -92,7 +94,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 Title=item.getTitle();
+			 title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -113,7 +115,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 Title=item.getTitle();
+			 title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -123,20 +125,20 @@ public class SearchBookStepsTest {
 	
 	@Given("a user or an administrator insert a valid  substring of the signature {string}")
 	public void a_user_or_an_administrator_insert_a_valid_substring_of_the_signature(String subSignature) {
-     this.subSignature=subSignature;
+		this.subSignature=subSignature;
 	}
 
 	@When("the user or an administrator call searchBookbySignature function")
 	public void the_user_or_an_administrator_call_search_bookby_signature_function() {
-    details1=lb.searchBookbySignature(subSignature);
-    numReturnBooks=details1.size();
-    for(Book2 item:details1)
-	{
-		 Title=item.getTitle();
-	     authorName=item.getAuthor();
-		 ISBN=item.getISBN();
-		 signature=item.getSignature();
-	}
+		details1=lb.searchBookbySignature(subSignature);
+		numReturnBooks=details1.size();
+		for(Book2 item:details1)
+		{
+			title=item.getTitle();
+			authorName=item.getAuthor();
+			ISBN=item.getISBN();
+			signature=item.getSignature();
+		}
 	}
 
 
@@ -144,7 +146,7 @@ public class SearchBookStepsTest {
 
 	@Then("the full title of the book should be {string}")
 	public void the_full_title_of_the_book_should_be(String title) {
-		assertEquals(this.Title,title);
+		assertEquals(this.title,title);
 	
 	}
 
@@ -204,7 +206,8 @@ public class SearchBookStepsTest {
 
 	@Then("the statement {string} should be printed on the screen")
 	public void the_statement_should_be_printed_on_the_screen(String notfound) {
-        System.out.println(notfound);
+        //System.out.println(notfound);
+		log.info(notfound);
 	}
 
 	@Then("the number of returend books should be {int}")

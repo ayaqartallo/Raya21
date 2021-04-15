@@ -1,8 +1,8 @@
 package MyLibrary2;
 
 public class CredentialsClass2 {
-	public String username;
-	public String password;
+	 String username;
+	 String password;
 	
 	public CredentialsClass2(String username,String password) {
 		this.username=username;

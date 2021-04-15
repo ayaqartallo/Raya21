@@ -2,8 +2,10 @@ package MyLibrary2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
+
 
 public class LibraryClass2 {
 	
@@ -14,7 +16,7 @@ public class LibraryClass2 {
 	private ArrayList <Book2>list2;
 	CredentialsClass2 c1,c2,c3,c4;
 	
-
+	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
 	public LibraryClass2()
 	{
@@ -62,7 +64,8 @@ public class LibraryClass2 {
 			lio=false;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "You are already logged out");
+			//JOptionPane.showMessageDialog(null, "You are already logged out");
+			log.info("You are already logged out");
 		}
 		
 	}
@@ -73,8 +76,8 @@ public class LibraryClass2 {
 		if(lio) {
 				for(Book2 book:list) {
 					if(b1.equals(book)) {
-						System.out.println("This book is exist");
-						
+						//System.out.println("This book is exist");
+						log.info("This book is exist");
 					}
 					else {
 						list2.add(b1);
@@ -88,8 +91,8 @@ public class LibraryClass2 {
 		
 	}
 
-	public void setLoggedin(boolean l) {
-		this.lio=l;
+	static void setLoggedin(boolean l) {
+		lio=l;
 	}
 	
 	public List <Book2> searchBookbysubTitle(String subTitle) {

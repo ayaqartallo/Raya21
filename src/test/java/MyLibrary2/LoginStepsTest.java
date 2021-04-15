@@ -2,6 +2,8 @@ package MyLibrary2;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 
 import io.cucumber.java.en.Given;
@@ -14,6 +16,7 @@ public class LoginStepsTest {
 	private  String user;
 	private Object status; 
 	private String pw; 
+	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
 	public LoginStepsTest(LibraryClass2 login) {
 		this.login=login;
@@ -47,7 +50,8 @@ public class LoginStepsTest {
 	}
 	@Then("A message wrong should appear")
 	public void a_message_wrong_should_appear() {
-		JOptionPane.showMessageDialog(null, "You enter a wrong password");
+		//JOptionPane.showMessageDialog(null, "You enter a wrong password");
+		log.info("You enter a wrong password");
 	}
 
 }

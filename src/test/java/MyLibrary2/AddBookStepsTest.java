@@ -2,6 +2,8 @@ package MyLibrary2;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 
 import io.cucumber.java.en.Given;
@@ -12,6 +14,7 @@ import MyLibrary2.LibraryClass2;
 public class AddBookStepsTest {
 	private String e;
 	private LibraryClass2 b;
+	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
 	public AddBookStepsTest(LibraryClass2 b) {
 		this.b=b;
@@ -41,7 +44,8 @@ public class AddBookStepsTest {
 
 	@Then("A message login to add books should be appear")
 	public void a_message_login_to_add_books_should_appear() {
-	    JOptionPane.showMessageDialog(null, "You should login to add book to the library!");
+	    //JOptionPane.showMessageDialog(null, "You should login to add book to the library!");
+		log.info("You should login to add book to the library!");
 	}
 
 }

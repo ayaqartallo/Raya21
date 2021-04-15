@@ -1,5 +1,7 @@
 package MyLibrary2;
 
+import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 
 import io.cucumber.java.en.Given;
@@ -9,6 +11,7 @@ import MyLibrary2.LibraryClass2;
 
 public class LogoutStepsTest {
     LibraryClass2 lc;
+    private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
 	public LogoutStepsTest(LibraryClass2 lc) {
 		this.lc=lc;
@@ -26,7 +29,8 @@ public class LogoutStepsTest {
 
 	@Then("Administrator log out")
 	public void administrator_log_out() {
-	    JOptionPane.showMessageDialog(null, "You are logout");
+	    //JOptionPane.showMessageDialog(null, "You are logout");
+		log.info("You are logout");
 	}
 
 }
