@@ -74,7 +74,7 @@ public class LibraryClass2 {
 	return s;
 	}
 	public void logoutFunction() {
-		if(lio==true) {
+		if(lio) {
 			lio=false;
 		}
 		else {
@@ -85,7 +85,7 @@ public class LibraryClass2 {
 
 	public String addBook(String title, String author, String signature, String isbn) {
 		Book2 b1=new Book2(isbn,title,author,signature);
-		if(lio==true) {
+		if(lio) {
 				for(Book2 book:list) {
 					if(b1.equals(book)) {
 						System.out.println("This book is exist");
@@ -104,7 +104,7 @@ public class LibraryClass2 {
 	}
 
 	public void setLoggedin(boolean l) {
-		this.lio=l;
+		lio=l;
 	}
 	
 	public ArrayList <Book2> searchBookbysubTitle(String subTitle) {

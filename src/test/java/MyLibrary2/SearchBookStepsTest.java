@@ -209,7 +209,7 @@ public class SearchBookStepsTest {
 
 	@Then("the number of returend books should be {int}")
 	public void the_number_of_returend_books_should_be(Integer numReturnBooks) {
-		assertTrue(3==3);
+		assertTrue(this.numReturnBooks==numReturnBooks);
 	}
 
 	@Then("all the details of the books should be printed on the screen")
