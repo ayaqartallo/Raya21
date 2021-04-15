@@ -1,17 +1,17 @@
 package MyLibrary2;
 
 public class Book2 {
-	String ISBN;
-	String Title;
-	String Author;
-	String Signature;
+	String isbn;
+	String title;
+	String author;
+	String signature;
 	
-	public Book2 (String ISBN,String Title,String Author,String Signature)//constructor
+	public Book2 (String isbn,String title,String author,String signature)//constructor
 	{
-		this.ISBN=ISBN;
-		this.Title=Title;
-		this.Author=Author;
-        this.Signature=Signature;
+		this.isbn=isbn;
+		this.title=title;
+		this.author=author;
+        this.signature=signature;
 		
 		
 	}
@@ -19,22 +19,27 @@ public class Book2 {
 
 	 public String getTitle()
 	    {
-	    	return Title;
+	    	return title;
 	    }
 	 
 	 public String getISBN()
 	    {
-	    	return ISBN;
+	    	return isbn;
 	    }
 	 
 	 public String getAuthor()
 	    {
-	    	return Author;
+	    	return author;
 	    }
 	 
 	 public String getSignature()
 	    {
-	    	return Signature;
+	    	return signature;
 	    }
+
+
+	boolean isEqualBook(Book2 book) {
+		return equals(book);
+	}
 
 }
