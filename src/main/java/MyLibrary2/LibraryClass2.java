@@ -2,15 +2,12 @@ package MyLibrary2;
 
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
 
-import MyLibrary2.Book2;
-import MyLibrary2.CredentialsClass2;
+import javax.swing.JOptionPane;
 
 public class LibraryClass2 {
 	
 	private ArrayList <Book2>list;
-	private Book2 book;
 	private ArrayList <CredentialsClass2>credential;
 	public static boolean lio=false;
 	ArrayList <String> details;
