@@ -59,7 +59,7 @@ public class LibraryClass2 {
 
 	return s;
 	}
-	public void logoutFunction() {
+	static void logoutFunction() {
 		if(lio) {
 			lio=false;
 		}
