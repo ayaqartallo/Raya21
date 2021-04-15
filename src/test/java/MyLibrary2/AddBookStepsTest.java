@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.logging.Logger;
 
-import javax.swing.JOptionPane;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
