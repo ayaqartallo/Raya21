@@ -1,4 +1,4 @@
-package MyLibrary2;
+package library;
 
 import static org.junit.Assert.assertEquals;
 
@@ -10,11 +10,10 @@ import java.util.List;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import library.Book2;
+import library.LibraryClass2;
 
-import MyLibrary2.Book2;
-import MyLibrary2.LibraryClass2;
-
-public class SearchBookStepsTest {
+public class SearchBookSteps {
 	private String subTitle;
 	private String invalidAuthorName;
 	private Integer numReturnBooks ;
@@ -30,7 +29,7 @@ public class SearchBookStepsTest {
 	private List <Book2> details1=new ArrayList<Book2>();
 	private ArrayList <Book2> empty=new ArrayList<Book2>();
 	
-	public SearchBookStepsTest(LibraryClass2 lb) {
+	public SearchBookSteps(LibraryClass2 lb) {
 		this.lb=lb;
 	}
 	@Given("a user or an administrator is logged in")
@@ -229,5 +228,3 @@ public class SearchBookStepsTest {
 
 
 }
-
-

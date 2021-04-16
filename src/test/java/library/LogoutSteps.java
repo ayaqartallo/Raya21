@@ -1,17 +1,16 @@
-package MyLibrary2;
+package library;
 
 import javax.swing.JOptionPane;
-
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import MyLibrary2.LibraryClass2;
+import library.LibraryClass2;
 
-public class LogoutStepsTest {
+public class LogoutSteps {
     LibraryClass2 lc;
 	
-	public LogoutStepsTest(LibraryClass2 lc) {
+	public LogoutSteps(LibraryClass2 lc) {
 		this.lc=lc;
 	}
 	

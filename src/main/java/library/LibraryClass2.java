@@ -1,14 +1,15 @@
-package MyLibrary2;
+package library;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-import javax.swing.JOptionPane;
+
 
 public class LibraryClass2 {
-	
+	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	private ArrayList <Book2>list;
-	static ArrayList <CredentialsClass2>credential;
+	static ArrayList <CredentialsClass2>credential=new ArrayList <CredentialsClass2> ();
     static boolean lio=false;
 	ArrayList <String> details;
 	Book2 book1;
@@ -26,7 +27,6 @@ public class LibraryClass2 {
 		list=new ArrayList<Book2>();
 		list2=new ArrayList<Book2>();
 		
-		credential=new ArrayList <CredentialsClass2> ();
 		c1=new CredentialsClass2("alaa","20alaa");
 		c2=new CredentialsClass2("aya","1234");
 		c3=new CredentialsClass2("malek","1998m");
@@ -73,12 +73,12 @@ public class LibraryClass2 {
 
 	return s;
 	}
-	public void logoutFunction() {
+	static void logoutFunction() {
 		if(lio) {
 			lio=false;
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "You are already logged out");
+			log.info("You are already logged out");
 		}
 		
 	}
@@ -88,7 +88,7 @@ public class LibraryClass2 {
 		if(lio) {
 				for(Book2 book:list) {
 					if(b1.equals(book)) {
-						System.out.println("This book is exist");
+						log.info("This book is exist");
 						
 					}
 					else {
@@ -103,7 +103,7 @@ public class LibraryClass2 {
 		
 	}
 
-	public void setLoggedin(boolean l) {
+	static void setLoggedin(boolean l) {
 		lio=l;
 	}
 	

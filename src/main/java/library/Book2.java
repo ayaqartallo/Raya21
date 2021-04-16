@@ -1,4 +1,4 @@
-package MyLibrary2;
+package library;
 
 public class Book2 {
 	String isbn;

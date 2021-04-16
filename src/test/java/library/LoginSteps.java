@@ -1,4 +1,4 @@
-package MyLibrary2;
+package library;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,15 +7,15 @@ import javax.swing.JOptionPane;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import MyLibrary2.LibraryClass2;
+import library.LibraryClass2;
 
-public class LoginStepsTest {
+public class LoginSteps {
 	private LibraryClass2 login;
 	private  String user;
 	private Object status; 
 	private String pw; 
 	
-	public LoginStepsTest(LibraryClass2 login) {
+	public LoginSteps(LibraryClass2 login) {
 		this.login=login;
 	}
 	
