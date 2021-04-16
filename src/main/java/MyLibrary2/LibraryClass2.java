@@ -103,7 +103,7 @@ public class LibraryClass2 {
 		
 	}
 
-	public void setLoggedin(boolean l) {
+	 void setLoggedin(boolean l) {
 		lio=l;
 	}
 	
