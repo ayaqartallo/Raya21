@@ -12,7 +12,6 @@ public class LibraryClass2 {
 	static boolean lio=false;
 	ArrayList <String> details;
 	private ArrayList <Book2>list2;
-	CredentialsClass2 c1,c2,c3,c4;
 	
 	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
