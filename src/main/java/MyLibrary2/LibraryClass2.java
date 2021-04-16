@@ -70,20 +70,25 @@ public class LibraryClass2 {
 	
 	public String addBook(String title, String author, String signature, String isbn) {
 		Book2 b1=new Book2(isbn,title,author,signature);
+		String s = "";
 		if(lio) {
 				for(Book2 book:list) {
 					if(b1.equals(book)) {
 						log.info("This book is exist");
+						s="not added";
+						return s;
 					}
 					else {
 						list2.add(b1);
+						
 					}
 					
 				}
+				s="added";
 				list.addAll(list2);
 			
 		}
-		return "added";
+		return s;
 		
 	}
 
