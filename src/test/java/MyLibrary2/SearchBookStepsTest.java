@@ -17,7 +17,7 @@ import MyLibrary2.LibraryClass2;
 public class SearchBookStepsTest {
 	private String subTitle;
 	private String invalidAuthorName;
-	private int numReturnBooks ;
+	private Integer numReturnBooks ;
 	private String invalidsubTitle;
 	private String subAuthorName;
 	private String subStringISBN;
@@ -200,7 +200,7 @@ public class SearchBookStepsTest {
 	
 	@Then("the number of returned books should be {int}")
 	public void the_number_of_returned_books_should_be(Integer numReturnBooks) {
-		assertTrue(this.numReturnBooks==numReturnBooks);
+		 assertEquals(this.numReturnBooks,numReturnBooks);
 	}
 
 	@Then("the statement {string} should be printed on the screen")
@@ -210,7 +210,7 @@ public class SearchBookStepsTest {
 
 	@Then("the number of returend books should be {int}")
 	public void the_number_of_returend_books_should_be(Integer numReturnBooks) {
-		assertTrue(this.numReturnBooks==numReturnBooks);
+		 assertEquals(this.numReturnBooks,numReturnBooks);
 	}
 
 	@Then("all the details of the books should be printed on the screen")
