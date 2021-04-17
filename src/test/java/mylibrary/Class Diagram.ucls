@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="MyLibrary2.AddBookStepsTest" project="MyLibrary2" 
-    file="/MyLibrary2/src/test/java/MyLibrary2/AddBookStepsTest.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="mylibrary.AddBookSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/AddBookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="276" width="421" x="9" y="-182"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="MyLibrary2.LoginStepsTest" project="MyLibrary2" 
-    file="/MyLibrary2/src/test/java/MyLibrary2/LoginStepsTest.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="mylibrary.LoginSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/LoginSteps.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="331" width="451" x="441" y="22"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,13 +19,13 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="3" language="java" name="MyLibrary2" project="MyLibrary2" file="/MyLibrary2/src/main/java/MyLibrary2" 
+  <package id="3" language="java" name="mylibrary" project="MyLibrary2" file="/MyLibrary2/src/main/java/mylibrary" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="175" width="106" x="546" y="-183"/>    
     <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <class id="4" language="java" name="MyLibrary2.LogoutStepsTest" project="MyLibrary2" 
-    file="/MyLibrary2/src/test/java/MyLibrary2/LogoutStepsTest.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="mylibrary.LogoutSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/LogoutSteps.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="185" width="221" x="671" y="-174"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -33,8 +33,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="MyLibrary2.SearchBookStepsTest" project="MyLibrary2" 
-    file="/MyLibrary2/src/test/java/MyLibrary2/SearchBookStepsTest.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="mylibrary.SearchBookSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/SearchBookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="808" width="540" x="905" y="-196"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

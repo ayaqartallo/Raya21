@@ -1,4 +1,4 @@
-package MyLibrary2;
+package mylibrary;
 
 public class CredentialsClass2 {
 	 String username;

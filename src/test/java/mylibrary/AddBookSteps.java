@@ -1,21 +1,20 @@
-package MyLibrary2;
+package mylibrary;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.logging.Logger;
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import MyLibrary2.LibraryClass2;
+import mylibrary.LibraryClass2;
 
-public class AddBookStepsTest {
+public class AddBookSteps {
 	private String e;
 	private LibraryClass2 b;
 	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
-	public AddBookStepsTest(LibraryClass2 b) {
+	public AddBookSteps(LibraryClass2 b) {
 		this.b=b;
 	}
 	

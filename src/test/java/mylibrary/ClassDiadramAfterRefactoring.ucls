@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="mylibrary.AddBookSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/AddBookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="293" width="545" x="156" y="170"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="mylibrary.LoginSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/LoginSteps.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="292" width="415" x="162" y="-213"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="mylibrary.SearchBookSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/SearchBookSteps.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="804" width="433" x="904" y="-257"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="mylibrary.LogoutSteps" project="MyLibrary2" 
+    file="/MyLibrary2/src/test/java/mylibrary/LogoutSteps.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="201" x="610" y="-155"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

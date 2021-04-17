@@ -1,37 +1,31 @@
-package MyLibrary2;
+package mylibrary;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import MyLibrary2.Book2;
-import MyLibrary2.LibraryClass2;
-
-public class SearchBookStepsTest {
+public class SearchBookSteps {
 	private String subTitle;
 	private String invalidAuthorName;
-	private int numReturnBooks ;
+	private Integer numReturnBooks ;
 	private String invalidsubTitle;
 	private String subAuthorName;
 	private String subStringISBN;
 	private String subSignature;
-	public  static String title;
+	public  static String Title;
 	public  static String authorName;
 	public  static String ISBN;
 	public  static String signature;
 	private LibraryClass2 lb;
 	private List <Book2> details1=new ArrayList<Book2>();
 	private ArrayList <Book2> empty=new ArrayList<Book2>();
-	private static final Logger log = Logger.getLogger(LibraryClass2.class.getName());
 	
-	public SearchBookStepsTest(LibraryClass2 lb) {
+	public SearchBookSteps(LibraryClass2 lb) {
 		this.lb=lb;
 	}
 	@Given("a user or an administrator is logged in")
@@ -73,7 +67,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 title=item.getTitle();
+			 Title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -94,7 +88,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 title=item.getTitle();
+			 Title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -115,7 +109,7 @@ public class SearchBookStepsTest {
 		numReturnBooks=details1.size();
 		for(Book2 item:details1)
 		{
-			 title=item.getTitle();
+			 Title=item.getTitle();
 		     authorName=item.getAuthor();
 			 ISBN=item.getISBN();
 			 signature=item.getSignature();
@@ -125,20 +119,20 @@ public class SearchBookStepsTest {
 	
 	@Given("a user or an administrator insert a valid  substring of the signature {string}")
 	public void a_user_or_an_administrator_insert_a_valid_substring_of_the_signature(String subSignature) {
-		this.subSignature=subSignature;
+     this.subSignature=subSignature;
 	}
 
 	@When("the user or an administrator call searchBookbySignature function")
 	public void the_user_or_an_administrator_call_search_bookby_signature_function() {
-		details1=lb.searchBookbySignature(subSignature);
-		numReturnBooks=details1.size();
-		for(Book2 item:details1)
-		{
-			title=item.getTitle();
-			authorName=item.getAuthor();
-			ISBN=item.getISBN();
-			signature=item.getSignature();
-		}
+    details1=lb.searchBookbySignature(subSignature);
+    numReturnBooks=details1.size();
+    for(Book2 item:details1)
+	{
+		 Title=item.getTitle();
+	     authorName=item.getAuthor();
+		 ISBN=item.getISBN();
+		 signature=item.getSignature();
+	}
 	}
 
 
@@ -146,7 +140,7 @@ public class SearchBookStepsTest {
 
 	@Then("the full title of the book should be {string}")
 	public void the_full_title_of_the_book_should_be(String title) {
-		assertEquals(this.title,title);
+		assertEquals(Title,title);
 	
 	}
 
@@ -201,18 +195,17 @@ public class SearchBookStepsTest {
 	
 	@Then("the number of returned books should be {int}")
 	public void the_number_of_returned_books_should_be(Integer numReturnBooks) {
-		assertTrue(this.numReturnBooks==numReturnBooks);
+		 assertEquals(this.numReturnBooks,numReturnBooks);
 	}
 
 	@Then("the statement {string} should be printed on the screen")
 	public void the_statement_should_be_printed_on_the_screen(String notfound) {
-
-		log.info(notfound);
+        System.out.println(notfound);
 	}
 
 	@Then("the number of returend books should be {int}")
 	public void the_number_of_returend_books_should_be(Integer numReturnBooks) {
-		assertTrue(this.numReturnBooks==numReturnBooks);
+		 assertEquals(this.numReturnBooks,numReturnBooks);
 	}
 
 	@Then("all the details of the books should be printed on the screen")
